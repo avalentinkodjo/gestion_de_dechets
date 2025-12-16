@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connexion / Inscription</title>
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <a href="../index.html" class="back-home"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+
+  <div class="container" id="container">
+    <!-- Formulaire d'inscription -->
+    <div class="form-container sign-up-container">
+      <form action="../controllers/AuthController.php" autocomplete="off" method="post" autocomplete="off">
+        <h2>Créer un compte</h2>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="nom" placeholder="Nom complet" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="mot_de_passe" placeholder="Mot de passe" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-users"></i>
+          <select name="role" required>
+            <option value="">-- Type d'utilisateur --</option>
+            <option value="citoyen">Citoyen</option>
+            <option value="collecteur">Collecteur</option>
+            <option value="entreprise">Entreprise de collecte</option>
+          </select>
+        </div>
+        <button type="submit" name="inscription">S'inscrire</button>
+        </form>
+    </div>
+
+    <!-- Formulaire de connexion -->
+    <div class="form-container sign-in-container">
+      <form action="../controllers/AuthController.php" autocomplete="off" method="post" autocomplete="off">
+        <h2>Se connecter</h2>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="mot_de_passe" placeholder="Mot de passe" required />
+        </div>
+        <button type="submit" name="connexion">Se connecter</button>
+    </form>
+    </div>
+
+    <!-- Panneau latéral -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h2>Heureux de vous revoir sur TogoEthic !</h2>
+          <p>Si vous disposez d'un compte</p>
+          <p>Connectez-vous pour participer à la gestion verte du Togo 🌱</p>
+          <button class="ghost" id="signIn">Connexion</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h2>Bonjour !</h2>
+          <h2>Bienvenue sur TogoEthic !</h2>
+          <p>Rejoins notre mission pour un environnement plus propre 🇹🇬</p>
+          <button class="ghost" id="signUp">Inscription</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+    document.getElementById('signUp').addEventListener('click', () => {
+      container.classList.add('right-panel-active');
+    });
+    document.getElementById('signIn').addEventListener('click', () => {
+      container.classList.remove('right-panel-active');
+    });
+  </script>
+
+<script>
+  // Lire les paramètres dans l'URL
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('error')) {
+    alert(decodeURIComponent(params.get('error')));
+  } else if (params.has('success')) {
+    alert(decodeURIComponent(params.get('success')));
+  }
+</script>
+
+</body>
+</html>

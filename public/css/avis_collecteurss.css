@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.no-reviews {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+.avis-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.avis-table th, .avis-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.avis-table th {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+.avis-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.stars i {
+    color: #ffc107;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .avis-table th, .avis-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Conteneur du bouton de retour */
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    bottom: 30px;
+}
+
+/* Style du bouton de retour */
+.back-button {
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white;               /* Couleur du texte */
+    border: none;               /* Pas de bordure */
+    padding: 10px 20px;         /* Espacement intérieur */
+    font-size: 16px;            /* Taille de police */
+    border-radius: 5px;         /* Coins arrondis */
+    cursor: pointer;           /* Curseur en forme de main */
+    transition: background-color 0.3s ease; /* Effet de transition */
+}
+
+/* Effet de survol */
+.back-button:hover {
+    background-color: #45a049; /* Couleur de fond plus sombre au survol */
+}

@@ -1,0 +1,120 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f8f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d6a4f;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2d6a4f;
+}
+
+/* Message bloc */
+.message {
+    border-left: 5px solid #2d6a4f;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    background: #f0fdf4;
+    border-radius: 10px;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-header i {
+    margin-right: 10px;
+    color: #2d6a4f;
+}
+
+.message-body {
+    margin-bottom: 15px;
+}
+
+.message-date {
+    font-size: 0.85em;
+    color: #777;
+}
+
+/* Réponse */
+.reply-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.reply-form button {
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reply-form button:hover {
+    background: #1b4332;
+}
+
+/* Réponses */
+.reponse {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #e9f7ef;
+    border-left: 3px solid #40916c;
+    border-radius: 8px;
+}

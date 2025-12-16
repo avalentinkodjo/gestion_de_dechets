@@ -1,0 +1,182 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f9f4;
+    color: #333;
+  }
+  
+  /* Navigation bar */
+  .navbar {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .logout-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #e03e3e;
+  }
+  
+  /* Hero section */
+  .hero {
+    background: linear-gradient(135deg, #28a745, #006400);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    margin-top: 80px; /* For space under fixed navbar */
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Notifications Section */
+  .notifications {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .notifications h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .notifications ul {
+    list-style-type: none;
+  }
+  
+  .notifications li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .notifications li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .notifications small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  /* Action Cards Section */
+  .action-cards {
+    padding: 60px 20px;
+    background-color: #e9f5e9;
+  }
+  
+  .action-cards .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-basis: 48%;
+  }
+  
+  .card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .card .btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card .btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+  

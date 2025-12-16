@@ -1,0 +1,99 @@
+/* Structure générale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #008f5d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header i {
+    margin-right: 10px;
+}
+
+/* Conteneur principal */
+.table-container {
+    width: 90%;
+    margin: 2rem auto;
+    overflow-x: auto;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #008f5d;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Bouton de retour */
+.return-btn {
+    background-color: #008f5d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.return-btn:hover {
+    background-color: #006e46;
+}
+
+/* Colonnes spécifiques */
+.photo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.action {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.action:hover {
+    text-decoration: underline;
+}
+
+/* Texte des statuts */
+strong {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+}

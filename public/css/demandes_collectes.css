@@ -1,0 +1,145 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .navbar h1 {
+    font-size: 24px;
+  }
+  
+  .navbar .btn {
+    background-color: #fff;
+    color: #28a745;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .btn:hover {
+    background-color: #218838;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    background: url('../images/green-bg.jpg') no-repeat center center/cover;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Section */
+  .form-section {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 30px;
+  }
+  
+  .form-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #28a745;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input, .form-group select, .form-group button {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  
+  .form-group input[type="file"] {
+    background-color: transparent;
+    padding: 10px;
+  }
+  
+  .form-group button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-group button:hover {
+    background-color: #218838;
+  }
+  
+  .form-group button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Button for location */
+  .btn-location {
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-location:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Position Text */
+  #position-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  

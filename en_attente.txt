@@ -1,0 +1,79 @@
+dashboard_gestionnaire.php
+
+<?php
+session_start();
+if (!isset($_SESSION['id']) || $_SESSION['role'] != 'gestionnaire') {
+    header("Location: login.php");
+    exit();
+}
+
+include 'config/database.php';
+
+// Récupérer les collectes en attente de validation
+$stmt = $pdo->prepare("SELECT * FROM demandes WHERE statut = 'en cours'");
+$stmt->execute();
+$demandes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation des collectes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Validation des collectes</h1>
+
+    <?php foreach ($demandes as $demande): ?>
+        <div class="demande">
+            <p><strong>Localisation :</strong> <?php echo $demande['localisation']; ?></p>
+            <p><strong>Type de déchet :</strong> <?php echo ucfirst($demande['type_dechet']); ?></p>
+            <p><strong>Date et heure :</strong> <?php echo $demande['date_heure']; ?></p>
+
+            <form action="controllers/ValidationController.php" method="post">
+                <input type="hidden" name="demande_id" value="<?php echo $demande['id']; ?>">
+                <button type="submit" name="valider">Valider</button>
+                <button type="submit" name="annuler">Annuler</button>
+            </form>
+        </div>
+    <?php endforeach; ?>
+</body>
+</html>
+
+
+
+
+
+3*********3
+
+
+
+
+
+controllers/ValidationController.php
+
+
+
+<?php
+include '../config/database.php';
+
+if (isset($_POST['valider']) || isset($_POST['annuler'])) {
+    $demande_id = $_POST['demande_id'];
+    $nouveau_statut = isset($_POST['valider']) ? 'terminée' : 'annulée';
+
+    // Mettre à jour le statut de la demande
+    $stmt = $pdo->prepare("UPDATE demandes SET statut = ? WHERE id = ?");
+    if ($stmt->execute([$nouveau_statut, $demande_id])) {
+        echo json_encode(['success' => 'La collecte a été mise à jour avec succès.']);
+    } else {
+        echo json_encode(['error' => 'Erreur lors de la mise à jour.']);
+    }
+}
+?>
+
+
+
+
+

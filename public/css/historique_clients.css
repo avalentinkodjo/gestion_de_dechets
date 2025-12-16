@@ -1,0 +1,153 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 10px;
+    background: #4caf50;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+div .btn {
+    background-color: #fff;
+    color: #28a745;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  div .btn:hover {
+    background-color: #218838;
+    color: #fff;
+  }
+  
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Cards Container */
+.historique-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+}
+
+/* Card Style */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    color: #4caf50;
+}
+
+.statut {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.statut.validée {
+    background: #c8e6c9;
+    color: #256029;
+}
+.statut.en-attente {
+    background: #fff3cd;
+    color: #856404;
+}
+.statut.rejetée {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.preuve-photo img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Bouton avis */
+.btn-avis {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-avis:hover {
+    background-color: #388e3c;
+}
+
+/* Empty state */
+.empty {
+    text-align: center;
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 50px;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #777;
+}

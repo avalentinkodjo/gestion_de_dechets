@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f9f6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #2e7d32;
+}
+
+.buttons a {
+    margin-left: 10px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.green {
+    background-color: #43a047;
+}
+
+.blue {
+    background-color: #1e88e5;
+}
+
+.red {
+    background-color: #e53935;
+}
+
+.back {
+    background-color: #757575;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.collecteur-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.collecteur-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.collecteur-card .infos p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.collecteur-card .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.no-data {
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}

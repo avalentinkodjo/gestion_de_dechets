@@ -1,0 +1,83 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+header i {
+    color: #27ae60;
+    margin-right: 8px;
+}
+
+/* Carte Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Info Box */
+.info-box {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.info-box h3 {
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.info-box i {
+    color: #16a085;
+    margin-right: 8px;
+}
+
+/* Bouton Retour */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background: #27ae60;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #219150;
+}
+
+.btn i {
+    margin-right: 8px;
+}
